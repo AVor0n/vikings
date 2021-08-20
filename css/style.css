@@ -17,6 +17,28 @@ a {
   text-decoration: none;
 }
 
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 1230px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.section-page {
+  padding: 100px 0;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 100px;
+  font-size: 36px;
+  line-height: 42px;
+  font-weight: 400;
+}
+
 .header {
   background-image: url("../images/header-bg.jpg");
   height: 100vh;
@@ -68,4 +90,31 @@ a {
 
 .header .logo {
   margin-top: 178px;
+}
+
+.about__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.about__inner .about__info {
+  width: 375px;
+  margin-right: 50px;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+}
+
+.about__inner .about__info .about__info-item {
+  margin-bottom: 25px;
+  color: #e5e5e5;
+}
+
+.about__inner .about__info .about__info-item span {
+  display: block;
+}
+
+.about__inner .about__text p {
+  margin-bottom: 25px;
 }
