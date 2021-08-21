@@ -132,3 +132,59 @@ ul{
          }
       }
    }
+
+.seasons{
+   .seasons__inner{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 100px 75px;
+      counter-reset: counter;
+      list-style: none;
+      .seasons__item{
+         width: 350px;
+         height: 250px;
+         background-size: cover;
+         background-repeat: no-repeat;
+         background-position: center center;
+         position: relative;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         &:hover {
+            .seasons__link{
+               opacity: 1;
+            }
+            &::after{
+               content: '';
+               position: absolute;
+               top: 0;
+               left: 0;
+               right: 0;
+               bottom: 0;
+               background-color: rgba(14,14,14,0.8);
+            }
+         }
+         &::before{
+            content: '0' counter(counter);
+            counter-increment: counter ;
+            font-weight: bold;
+            font-size: 96px;
+            line-height: 112px;
+            color: #600E09;
+            position: absolute;
+            top: -72px;
+            left: 0;
+            z-index: -1;
+         }
+         .seasons__link{
+            font-size: 36px;
+            line-height: 42px;
+            background-color: #0e0e0e;
+            padding: 12px 78px 11px;
+            opacity: 0;
+            transition: all 0.3s;
+            z-index: 2;
+         }
+      }
+   }
+}
