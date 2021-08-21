@@ -188,3 +188,51 @@ ul{
       }
    }
 }
+
+
+.heroes{
+   .heroes__inner{
+      display: flex;
+      justify-content: space-between;
+      .heroes__slider-img{
+         max-width: 775px;
+         position: relative;
+      }
+      .heroes__slider-text{
+         max-width: 350px;
+         p{
+            font-family: 'Roboto Condensed';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 21px;
+         }
+         color: #FFFFFF;
+         .heroes__name{
+            font-family: 'Roboto Condensed';
+            font-style: italic;
+            font-weight: 300;
+            font-size: 72px;
+            line-height: 84px;
+            color: #85CCDC;
+            margin-bottom: 44px;
+         }
+      }
+      .slick-btn{
+         background-color: transparent;
+         border: none;
+         cursor: pointer;
+         position: absolute;
+         top: 50%;
+         transform: translateY(-50%);
+         z-index: 1;
+         outline: none;
+      }
+      .slick-next{
+         right: 37px;
+      }
+      .slick-prev{
+         left: 37px;
+      }
+   }
+}

@@ -225,3 +225,60 @@ ul {
   transition: all 0.3s;
   z-index: 2;
 }
+
+.heroes .heroes__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.heroes .heroes__inner .heroes__slider-img {
+  max-width: 775px;
+  position: relative;
+}
+
+.heroes .heroes__inner .heroes__slider-text {
+  max-width: 350px;
+  color: #FFFFFF;
+}
+
+.heroes .heroes__inner .heroes__slider-text p {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.heroes .heroes__inner .heroes__slider-text .heroes__name {
+  font-family: 'Roboto Condensed';
+  font-style: italic;
+  font-weight: 300;
+  font-size: 72px;
+  line-height: 84px;
+  color: #85CCDC;
+  margin-bottom: 44px;
+}
+
+.heroes .heroes__inner .slick-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 1;
+  outline: none;
+}
+
+.heroes .heroes__inner .slick-next {
+  right: 37px;
+}
+
+.heroes .heroes__inner .slick-prev {
+  left: 37px;
+}
