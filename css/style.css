@@ -118,3 +118,44 @@ ul {
 .about__inner .about__text p {
   margin-bottom: 25px;
 }
+
+.video {
+  background-image: url("../images/video-bg.jpg");
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  text-align: right;
+}
+
+.video .video__text {
+  padding-top: 444px;
+  padding-right: 20px;
+  margin-bottom: 40px;
+  font-family: Roboto Condensed;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 72px;
+  line-height: 84px;
+  color: #85CCDC;
+}
+
+.video .video__text span {
+  display: block;
+  padding-right: 314px;
+}
+
+.video .video__play-btn {
+  margin-right: 266px;
+  position: relative;
+}
+
+.video .video__play-btn::before {
+  content: '';
+  background-image: url("../images/youtube-btn.svg");
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: -40px;
+  left: -112px;
+}
