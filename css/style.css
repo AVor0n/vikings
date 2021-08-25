@@ -62,28 +62,37 @@ ul {
           transform: rotate(180deg);
 }
 
-.header .menu__list {
+.header .menu {
+  padding: 50px 0 58px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#111213), color-stop(43.62%, #111213), color-stop(86.33%, rgba(32, 31, 33, 0)));
+  background: linear-gradient(180deg, #111213 0%, #111213 43.62%, rgba(32, 31, 33, 0) 86.33%);
+}
+
+.header .menu .menu__container {
+  max-width: 1385px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.header .menu .menu__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 50px 0 58px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#111213), color-stop(43.62%, #111213), color-stop(86.33%, rgba(32, 31, 33, 0)));
-  background: linear-gradient(180deg, #111213 0%, #111213 43.62%, rgba(32, 31, 33, 0) 86.33%);
 }
 
-.header .menu__list .menu__list-item {
+.header .menu .menu__list .menu__list-item {
   padding: 0 13px;
 }
 
-.header .menu__list .menu__list-item .menu__list-link {
+.header .menu .menu__list .menu__list-item .menu__list-link {
   font-size: 36px;
   line-height: 42px;
 }
 
-.header .menu__list .menu__list-item .menu__list-link:hover {
+.header .menu .menu__list .menu__list-item .menu__list-link:hover {
   text-decoration: underline;
   color: #85ccdc;
 }
@@ -160,7 +169,7 @@ ul {
   left: -112px;
 }
 
-.seasons .seasons__inner {
+.seasons .seasons__inner, .seasons .series__inner, .series .seasons__inner, .series .series__inner {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
@@ -170,7 +179,7 @@ ul {
   list-style: none;
 }
 
-.seasons .seasons__inner .seasons__item {
+.seasons .seasons__inner .seasons__item, .seasons .seasons__inner .series__item, .seasons .series__inner .seasons__item, .seasons .series__inner .series__item, .series .seasons__inner .seasons__item, .series .seasons__inner .series__item, .series .series__inner .seasons__item, .series .series__inner .series__item {
   width: 350px;
   height: 250px;
   background-size: cover;
@@ -188,11 +197,11 @@ ul {
           align-items: center;
 }
 
-.seasons .seasons__inner .seasons__item:hover .seasons__link {
+.seasons .seasons__inner .seasons__item:hover .seasons__link, .seasons .seasons__inner .seasons__item:hover .series__link, .seasons .seasons__inner .series__item:hover .seasons__link, .seasons .seasons__inner .series__item:hover .series__link, .seasons .series__inner .seasons__item:hover .seasons__link, .seasons .series__inner .seasons__item:hover .series__link, .seasons .series__inner .series__item:hover .seasons__link, .seasons .series__inner .series__item:hover .series__link, .series .seasons__inner .seasons__item:hover .seasons__link, .series .seasons__inner .seasons__item:hover .series__link, .series .seasons__inner .series__item:hover .seasons__link, .series .seasons__inner .series__item:hover .series__link, .series .series__inner .seasons__item:hover .seasons__link, .series .series__inner .seasons__item:hover .series__link, .series .series__inner .series__item:hover .seasons__link, .series .series__inner .series__item:hover .series__link {
   opacity: 1;
 }
 
-.seasons .seasons__inner .seasons__item:hover::after {
+.seasons .seasons__inner .seasons__item:hover::after, .seasons .seasons__inner .series__item:hover::after, .seasons .series__inner .seasons__item:hover::after, .seasons .series__inner .series__item:hover::after, .series .seasons__inner .seasons__item:hover::after, .series .seasons__inner .series__item:hover::after, .series .series__inner .seasons__item:hover::after, .series .series__inner .series__item:hover::after {
   content: '';
   position: absolute;
   top: 0;
@@ -202,7 +211,7 @@ ul {
   background-color: rgba(14, 14, 14, 0.8);
 }
 
-.seasons .seasons__inner .seasons__item::before {
+.seasons .seasons__inner .seasons__item::before, .seasons .seasons__inner .series__item::before, .seasons .series__inner .seasons__item::before, .seasons .series__inner .series__item::before, .series .seasons__inner .seasons__item::before, .series .seasons__inner .series__item::before, .series .series__inner .seasons__item::before, .series .series__inner .series__item::before {
   content: "0" counter(counter);
   counter-increment: counter;
   font-weight: bold;
@@ -215,7 +224,7 @@ ul {
   z-index: -1;
 }
 
-.seasons .seasons__inner .seasons__item .seasons__link {
+.seasons .seasons__inner .seasons__item .seasons__link, .seasons .seasons__inner .seasons__item .series__link, .seasons .seasons__inner .series__item .seasons__link, .seasons .seasons__inner .series__item .series__link, .seasons .series__inner .seasons__item .seasons__link, .seasons .series__inner .seasons__item .series__link, .seasons .series__inner .series__item .seasons__link, .seasons .series__inner .series__item .series__link, .series .seasons__inner .seasons__item .seasons__link, .series .seasons__inner .seasons__item .series__link, .series .seasons__inner .series__item .seasons__link, .series .seasons__inner .series__item .series__link, .series .series__inner .seasons__item .seasons__link, .series .series__inner .seasons__item .series__link, .series .series__inner .series__item .seasons__link, .series .series__inner .series__item .series__link {
   font-size: 36px;
   line-height: 42px;
   background-color: #0e0e0e;
@@ -286,4 +295,50 @@ ul {
 .footer .footer__text {
   text-align: center;
   padding: 15px 0 14px;
+}
+
+.page-header {
+  background-image: url("../images/season1-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 84vh;
+}
+
+.page-header .page-logo {
+  position: absolute;
+  left: 0;
+}
+
+.page-header .season-info {
+  position: absolute;
+  max-width: 1385px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 44px 47px 64px 35px;
+  background-color: #0e0e0e;
+  text-align: left;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.page-header .season-info .season-info__num {
+  font-weight: bold;
+  font-size: 96px;
+  line-height: 56px;
+  text-align: center;
+  margin-right: 51px;
+}
+
+.page-header .season-info .season-info__num span {
+  display: block;
+  font-size: 36px;
+  line-height: 42px;
+}
+
+.page-header .season-info .season-info__text {
+  margin-bottom: 15px;
 }

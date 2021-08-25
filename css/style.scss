@@ -55,12 +55,19 @@ ul{
       background: linear-gradient(180deg, #0E0E0E 0%, rgba(17, 17, 17, 0.850295) 16.53%, rgba(32, 31, 33, 0) 100%);
       transform: rotate(180deg);
    }
-   .menu__list{
-      display: flex;
-      justify-content: center;
+
+   .menu{
       padding: 50px 0 58px;
       background: linear-gradient(180deg, #111213 0%, #111213 43.62%, rgba(32, 31, 33, 0) 86.33%);
-      .menu__list-item{
+      .menu__container{
+         max-width: 1385px;
+         margin: 0 auto;
+         position: relative;
+      }
+      .menu__list{
+         display: flex;
+         justify-content: center;
+         .menu__list-item{
             padding: 0 13px;
             .menu__list-link{
                font-size: 36px;
@@ -70,6 +77,7 @@ ul{
                   color: #85ccdc;
                }
             }
+         }
       }
    }
    .logo{
@@ -133,14 +141,14 @@ ul{
       }
    }
 
-.seasons{
-   .seasons__inner{
+.seasons, .series{
+   .seasons__inner, .series__inner{
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-gap: 100px 75px;
       counter-reset: counter;
       list-style: none;
-      .seasons__item{
+      .seasons__item, .series__item{
          width: 350px;
          height: 250px;
          background-size: cover;
@@ -151,7 +159,7 @@ ul{
          justify-content: center;
          align-items: center;
          &:hover {
-            .seasons__link{
+            .seasons__link, .series__link{
                opacity: 1;
             }
             &::after{
@@ -176,7 +184,7 @@ ul{
             left: 0;
             z-index: -1;
          }
-         .seasons__link{
+         .seasons__link, .series__link{
             font-size: 36px;
             line-height: 42px;
             background-color: #0e0e0e;
@@ -243,3 +251,46 @@ ul{
       padding: 15px 0 14px;
    }
 }
+
+
+//** Season-1 start
+
+.page-header{
+   background-image: url('../images/season1-bg.jpg');
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center center;
+   height: 84vh;
+   .page-logo{
+      position: absolute;
+      left: 0;
+   }
+   .season-info{
+      position: absolute;
+      max-width: 1385px;
+      display: flex;
+      padding: 44px 47px 64px 35px;
+      background-color: #0e0e0e;
+      text-align: left;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      .season-info__num{
+         font-weight: bold;
+         font-size: 96px;
+         line-height: 56px;
+         text-align: center;
+         margin-right: 51px;
+         span{
+            display: block;
+            font-size: 36px;
+            line-height: 42px;
+         }
+      }
+      .season-info__text{
+         margin-bottom: 15px;
+      }
+   }
+}
+//** Season-1 end
